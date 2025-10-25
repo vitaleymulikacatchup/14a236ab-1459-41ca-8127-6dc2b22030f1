@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
@@ -128,8 +128,7 @@ export default function Home() {
               role: "Retired Teacher",
               company: "Medicare Advantage Member",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/19995471/pexels-photo-19995471.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              testimonial: "The team at MediCare Plus made choosing my Medicare plan so much easier. Their expertise saved me hundreds of dollars and gave me better coverage than I thought possible."
+              imageSrc: "https://images.pexels.com/photos/19995471/pexels-photo-19995471.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
             {
               id: "2",
@@ -137,8 +136,7 @@ export default function Home() {
               role: "Former Engineer",
               company: "Medicare Supplement Client",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/7551646/pexels-photo-7551646.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              testimonial: "I was overwhelmed by all the Medicare options until I found MediCare Plus. They explained everything clearly and helped me find a plan that perfectly fits my needs and budget."
+              imageSrc: "https://images.pexels.com/photos/7551646/pexels-photo-7551646.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
             {
               id: "3",
@@ -146,8 +144,7 @@ export default function Home() {
               role: "Retirees",
               company: "Dual Coverage Members",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/6972784/pexels-photo-6972784.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              testimonial: "As a couple, we had different healthcare needs. MediCare Plus found plans that work for both of us and saved us money. Their ongoing support has been invaluable."
+              imageSrc: "https://images.pexels.com/photos/6972784/pexels-photo-6972784.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
             {
               id: "4",
@@ -155,8 +152,7 @@ export default function Home() {
               role: "Healthcare Worker",
               company: "Part D Plan Member",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/23496503/pexels-photo-23496503.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-              testimonial: "Even with my healthcare background, navigating Medicare was confusing. MediCare Plus guided me through every step and ensured I got the best prescription drug coverage."
+              imageSrc: "https://images.pexels.com/photos/23496503/pexels-photo-23496503.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             }
           ]}
         />
