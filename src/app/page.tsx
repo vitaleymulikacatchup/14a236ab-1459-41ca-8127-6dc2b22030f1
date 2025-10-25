@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Award, CheckCircle, HelpCircle, Handshake, Star, Target, Rocket, Users, Zap } from "lucide-react";
 import { ThemeProvider } from "@/providers/ThemeProvider";
@@ -54,7 +54,6 @@ export default function Page() {
       <div id="about" data-section="about" className="mx-auto px-4 md:px-6">
         <TextAbout
           title="Expert MVP Development Team"
-          content="With over a decade of experience in product development, our team specializes in creating minimum viable products that validate your business concepts while minimizing risk and time-to-market. We combine technical expertise with market insights to deliver solutions that resonate with your target audience."
           buttons={[
             { text: "Schedule Consultation", href: "contact" }
           ]}
@@ -104,7 +103,6 @@ export default function Page() {
               name: "Sarah Johnson",
               role: "Founder",
               company: "TechStart",
-              content: "Their MVP development expertise helped us launch 3 months ahead of schedule. The market validation insights were invaluable.",
               rating: 5,
               imageSrc: "https://images.pexels.com/photos/12885861/pexels-photo-12885861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
@@ -113,7 +111,6 @@ export default function Page() {
               name: "Michael Chen",
               role: "Product Manager",
               company: "InnovaCorp",
-              content: "Outstanding service from concept to launch. They understood our vision and delivered beyond expectations.",
               rating: 5,
               imageSrc: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
@@ -122,7 +119,6 @@ export default function Page() {
               name: "Emily Rodriguez",
               role: "CEO",
               company: "Growth Dynamics",
-              content: "The team's expertise in MVP development saved us countless hours and resources. Highly recommended.",
               rating: 5,
               imageSrc: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
@@ -131,7 +127,6 @@ export default function Page() {
               name: "David Park",
               role: "Technical Director",
               company: "Future Labs",
-              content: "Professional, efficient, and results-driven. They delivered a robust MVP that exceeded our requirements.",
               rating: 5,
               imageSrc: "https://images.pexels.com/photos/4458554/pexels-photo-4458554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             }

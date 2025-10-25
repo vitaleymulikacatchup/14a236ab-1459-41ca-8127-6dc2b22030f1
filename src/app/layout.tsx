@@ -77,27 +77,27 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Mvp",
-  description: "Mvp",
-  keywords: "Mvp",
-  metadataBase: new URL("https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"),
+  title: "MVP Solutions - Revolutionary MVP Development Services",
+  description: "Transform your innovative ideas into market-ready products with our comprehensive MVP development services. We help startups and enterprises launch faster with validated solutions.",
+  keywords: "MVP development, minimum viable product, startup services, product development, market validation",
+  metadataBase: new URL("https://mvpsolutions.com"),
   alternates: {
-    canonical: "https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+    canonical: "https://mvpsolutions.com"
   },
   openGraph: {
-    title: "Mvp",
-    description: "Mvp",
-    siteName: "Mvp",
+    title: "MVP Solutions - Revolutionary MVP Development Services",
+    description: "Transform your innovative ideas into market-ready products with our comprehensive MVP development services.",
+    siteName: "MVP Solutions",
     type: "website",
     images: [{
       url: "https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-      alt: "Mvp"
+      alt: "MVP Solutions - Professional startup development"
     }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mvp",
-    description: "Mvp",
+    title: "MVP Solutions - Revolutionary MVP Development Services",
+    description: "Transform your innovative ideas into market-ready products with our comprehensive MVP development services.",
     images: ["https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"]
   },
   robots: {
