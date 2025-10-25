@@ -77,30 +77,28 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "MediCare Plus - Expert Medicare Insurance Services & Enrollment",
-  description: "Professional Medicare guidance and enrollment services. Compare plans, understand benefits, and get expert help finding the right Medicare coverage for your needs.",
-  keywords: ["Medicare enrollment", "Medicare insurance", "Medicare plans", "Medicare consultation", "Medicare benefits", "Medicare assistance"],
-  metadataBase: new URL("https://medicare-plus.com"),
+  title: "Mvp",
+  description: "Mvp",
+  keywords: "Mvp",
+  metadataBase: new URL("https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"),
   alternates: {
-    canonical: "https://medicare-plus.com"
+    canonical: "https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
   },
   openGraph: {
-    title: "MediCare Plus - Expert Medicare Insurance Services",
-    description: "Professional Medicare guidance and enrollment services. Get expert help finding the right Medicare coverage.",
-    siteName: "MediCare Plus",
+    title: "Mvp",
+    description: "Mvp",
+    siteName: "Mvp",
     type: "website",
-    images: [
-      {
-        url: "https://images.pexels.com/photos/8376148/pexels-photo-8376148.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-        alt: "Medicare consultation services"
-      }
-    ]
+    images: [{
+      url: "https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+      alt: "Mvp"
+    }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "MediCare Plus - Expert Medicare Insurance Services",
-    description: "Professional Medicare guidance and enrollment services.",
-    images: ["https://images.pexels.com/photos/8376148/pexels-photo-8376148.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"]
+    title: "Mvp",
+    description: "Mvp",
+    images: ["https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"]
   },
   robots: {
     index: true,

@@ -1,294 +1,237 @@
-"use client";
+"use client"
 
+import { Award, CheckCircle, HelpCircle, Handshake, Star, Target, Rocket, Users, Zap } from "lucide-react";
 import { ThemeProvider } from "@/providers/ThemeProvider";
-import NavbarStyleMinimal from '@/components/navbar/NavbarStyleMinimal';
+import NavbarLayoutFloatingOverlay from '@/components/navbar/NavbarLayoutFloatingOverlay/NavbarLayoutFloatingOverlay';
 import HeroSplit from '@/components/sections/hero/HeroSplit';
-import SplitAbout from '@/components/sections/about/SplitAbout';
+import TextAbout from '@/components/sections/about/TextAbout';
 import FeatureCardTwo from '@/components/sections/feature/FeatureCardTwo';
 import TestimonialCardOne from '@/components/sections/testimonial/TestimonialCardOne';
 import SocialProofOne from '@/components/sections/socialProof/SocialProofOne';
 import FaqBase from '@/components/sections/faq/FaqBase';
-import ContactSplit from '@/components/sections/contact/ContactSplit';
-import FooterBase from '@/components/sections/footer/FooterBase';
-import { Award, BarChart, Calendar, CheckCircle, FileText, Handshake, Heart, HelpCircle, MessageCircle, Phone, Shield, Star, Stethoscope, Users } from 'lucide-react';
+import ContactCenterForm from '@/components/sections/contact/ContactCenterForm';
+import FooterLogoEmphasis from '@/components/sections/footer/FooterLogoEmphasis';
 
-export default function Home() {
+export default function Page() {
   return (
     <ThemeProvider
-      defaultButtonVariant="shift-hover"
-      defaultTextAnimation="background-highlight"
+      defaultButtonVariant="icon-arrow"
+      defaultTextAnimation="entrance-slide"
       borderRadius="rounded"
     >
       <div id="nav" data-section="nav">
-        <NavbarStyleMinimal
-          brandName="MediCare Plus"
+        <NavbarLayoutFloatingOverlay
+          navItems={[
+            { name: "About", id: "about" },
+            { name: "Features", id: "features" },
+            { name: "Testimonials", id: "testimonials" },
+            { name: "FAQ", id: "faq" },
+            { name: "Contact", id: "contact" }
+          ]}
+          brandName="MVP Solutions"
           button={{
             text: "Get Started",
             href: "contact"
           }}
         />
       </div>
-
-      <div id="hero" data-section="hero">
+      
+      <div id="hero" data-section="hero" className="mx-auto px-4 md:px-6">
         <HeroSplit
-          title="Navigate Medicare with Confidence"
-          description="Expert guidance for Medicare enrollment, plan comparison, and benefits optimization. We help you find the right coverage for your healthcare needs."
-          tag="Medicare Experts"
-          tagIcon={Shield}
-          imageSrc="https://images.pexels.com/photos/8376148/pexels-photo-8376148.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          title="Revolutionary MVP Development Solutions"
+          description="Transform your innovative ideas into market-ready products with our comprehensive MVP development services. We help startups and enterprises launch faster with validated solutions."
+          tag="Premium MVP Services"
+          tagIcon={Award}
+          imageSrc="https://images.pexels.com/photos/34369598/pexels-photo-34369598.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           imagePosition="right"
           buttons={[
-            {
-              text: "Get Free Consultation",
-              href: "contact"
-            },
-            {
-              text: "Learn More",
-              href: "about"
-            }
+            { text: "Start Your MVP", href: "contact" },
+            { text: "Learn More", href: "about" }
           ]}
         />
       </div>
-
-      <div id="about" data-section="about">
-        <SplitAbout
-          title="Your Trusted Medicare Partners"
-          description="With over 15 years of experience helping seniors navigate Medicare, we provide personalized guidance to ensure you get the best coverage for your needs and budget."
-          tag="About Us"
-          tagIcon={Heart}
-          imageSrc="https://images.pexels.com/photos/5726809/pexels-photo-5726809.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-          imagePosition="left"
-          bulletPoints={[
-            {
-              title: "Expert Knowledge",
-              description: "Licensed Medicare specialists with comprehensive training on all plan types and regulations",
-              icon: Award
-            },
-            {
-              title: "Personalized Service",
-              description: "One-on-one consultations tailored to your specific health needs and financial situation",
-              icon: Users
-            },
-            {
-              title: "Ongoing Support",
-              description: "Year-round assistance with claims, plan changes, and benefit optimization",
-              icon: Phone
-            }
-          ]}
+      
+      <div id="about" data-section="about" className="mx-auto px-4 md:px-6">
+        <TextAbout
+          title="Expert MVP Development Team"
+          content="With over a decade of experience in product development, our team specializes in creating minimum viable products that validate your business concepts while minimizing risk and time-to-market. We combine technical expertise with market insights to deliver solutions that resonate with your target audience."
           buttons={[
-            {
-              text: "Schedule Consultation",
-              href: "contact"
-            }
+            { text: "Schedule Consultation", href: "contact" }
           ]}
         />
       </div>
-
-      <div id="features" data-section="features">
+      
+      <div id="features" data-section="features" className="mx-auto px-4 md:px-6">
         <FeatureCardTwo
-          title="Comprehensive Medicare Services"
-          description="We offer complete Medicare support services to help you make informed decisions about your healthcare coverage."
-          tag="Our Services"
-          tagIcon={Stethoscope}
+          title="Comprehensive MVP Services"
+          description="From ideation to launch, we provide end-to-end MVP development services that help you validate your business ideas efficiently and effectively."
+          tag="Core Features"
+          tagIcon={Zap}
           features={[
             {
-              title: "Medicare Enrollment",
-              description: "Expert assistance with initial enrollment, annual open enrollment, and special enrollment periods.",
-              icon: FileText
-            },
-            {
-              title: "Plan Comparison",
-              description: "Side-by-side analysis of Medicare plans to find the best coverage and savings for your needs.",
-              icon: BarChart
-            },
-            {
-              title: "Benefits Review",
-              description: "Annual review of your current plan to ensure it still meets your health and financial requirements.",
+              title: "Rapid Prototyping",
+              description: "Quick development cycles with validated learning approaches to test your core assumptions.",
               icon: CheckCircle
             },
             {
-              title: "Claims Assistance",
-              description: "Help with understanding and resolving Medicare claims, billing questions, and coverage issues.",
-              icon: HelpCircle
+              title: "Market Validation",
+              description: "Strategic user research and testing to ensure your MVP meets real market demands.",
+              icon: Target
+            },
+            {
+              title: "Scalable Architecture",
+              description: "Future-ready technical foundation that grows with your successful product launch.",
+              icon: Rocket
+            },
+            {
+              title: "User-Centric Design",
+              description: "Intuitive interfaces designed for maximum user engagement and conversion rates.",
+              icon: Users
             }
           ]}
         />
       </div>
-
-      <div id="testimonials" data-section="testimonials">
+      
+      <div id="testimonials" data-section="testimonials" className="mx-auto px-4 md:px-6">
         <TestimonialCardOne
-          title="What Our Clients Say"
-          description="Hear from satisfied clients who found the perfect Medicare coverage with our help."
+          title="Client Success Stories"
+          description="Discover how our MVP development services have helped businesses launch successful products and achieve market validation."
           tag="Client Reviews"
           tagIcon={Star}
           testimonials={[
             {
               id: "1",
-              name: "Dorothy Johnson",
-              role: "Retired Teacher",
-              company: "Medicare Advantage Member",
+              name: "Sarah Johnson",
+              role: "Founder",
+              company: "TechStart",
+              content: "Their MVP development expertise helped us launch 3 months ahead of schedule. The market validation insights were invaluable.",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/19995471/pexels-photo-19995471.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              imageSrc: "https://images.pexels.com/photos/12885861/pexels-photo-12885861.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
             {
               id: "2",
-              name: "Robert Martinez",
-              role: "Former Engineer",
-              company: "Medicare Supplement Client",
+              name: "Michael Chen",
+              role: "Product Manager",
+              company: "InnovaCorp",
+              content: "Outstanding service from concept to launch. They understood our vision and delivered beyond expectations.",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/7551646/pexels-photo-7551646.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              imageSrc: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
             {
               id: "3",
-              name: "Mary and John Wilson",
-              role: "Retirees",
-              company: "Dual Coverage Members",
+              name: "Emily Rodriguez",
+              role: "CEO",
+              company: "Growth Dynamics",
+              content: "The team's expertise in MVP development saved us countless hours and resources. Highly recommended.",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/6972784/pexels-photo-6972784.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              imageSrc: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             },
             {
               id: "4",
-              name: "Patricia Davis",
-              role: "Healthcare Worker",
-              company: "Part D Plan Member",
+              name: "David Park",
+              role: "Technical Director",
+              company: "Future Labs",
+              content: "Professional, efficient, and results-driven. They delivered a robust MVP that exceeded our requirements.",
               rating: 5,
-              imageSrc: "https://images.pexels.com/photos/23496503/pexels-photo-23496503.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+              imageSrc: "https://images.pexels.com/photos/4458554/pexels-photo-4458554.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
             }
           ]}
         />
       </div>
-
-      <div id="social-proof" data-section="social-proof">
+      
+      <div id="social-proof" data-section="social-proof" className="mx-auto px-4 md:px-6">
         <SocialProofOne
-          title="Trusted Insurance Partners"
-          description="We work with all major Medicare insurance providers to offer you the widest selection of coverage options."
-          tag="Partners"
+          title="Trusted by Industry Leaders"
+          description="Join hundreds of successful companies who have launched their MVPs with our proven development methodology."
+          tag="Trusted Partners"
           tagIcon={Handshake}
           logos={[
-            "https://images.pexels.com/photos/16033963/pexels-photo-16033963.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "https://images.pexels.com/photos/9949424/pexels-photo-9949424.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "https://images.pexels.com/photos/208474/pexels-photo-208474.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "https://images.pexels.com/photos/9949424/pexels-photo-9949424.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "https://images.pexels.com/photos/15483517/pexels-photo-15483517.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "https://images.pexels.com/photos/18530623/pexels-photo-18530623.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "https://images.pexels.com/photos/208474/pexels-photo-208474.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
-            "https://images.pexels.com/photos/6972784/pexels-photo-6972784.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            "https://images.pexels.com/photos/15624239/pexels-photo-15624239.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/2379944/pexels-photo-2379944.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/16629368/pexels-photo-16629368.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/303317/pexels-photo-303317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/15624239/pexels-photo-15624239.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/8185626/pexels-photo-8185626.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/8373814/pexels-photo-8373814.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+            "https://images.pexels.com/photos/303317/pexels-photo-303317.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
           ]}
           speed={35}
           showCard={true}
         />
       </div>
-
-      <div id="faq" data-section="faq">
+      
+      <div id="faq" data-section="faq" className="mx-auto px-4 md:px-6">
         <FaqBase
           title="Frequently Asked Questions"
-          description="Find answers to common questions about Medicare enrollment, coverage options, and our services."
-          tag="FAQ"
-          tagIcon={MessageCircle}
+          description="Get answers to common questions about our MVP development process, timeline, and services."
+          tag="Support"
+          tagIcon={HelpCircle}
           faqs={[
             {
               id: "1",
-              title: "When can I enroll in Medicare?",
-              content: "You can first enroll in Medicare during your Initial Enrollment Period, which begins 3 months before you turn 65 and ends 3 months after. There's also an Annual Open Enrollment Period from October 15 to December 7 each year."
+              title: "How long does MVP development typically take?",
+              content: "Most MVP projects take 8-12 weeks from concept to launch, depending on complexity and feature scope. We use agile methodologies to ensure rapid iteration and continuous feedback."
             },
             {
               id: "2",
-              title: "What's the difference between Medicare Advantage and Medicare Supplement?",
-              content: "Medicare Advantage (Part C) replaces Original Medicare and often includes prescription drug coverage. Medicare Supplement (Medigap) works alongside Original Medicare to help cover out-of-pocket costs like copays and deductibles."
+              title: "What's included in your MVP development service?",
+              content: "Our comprehensive service includes market research, user experience design, technical development, testing, deployment, and post-launch support. We also provide analytics setup and user feedback collection systems."
             },
             {
               id: "3",
-              title: "How much does Medicare cost?",
-              content: "Medicare Part A is typically premium-free if you've worked 40+ quarters. Part B has a standard premium of $164.90 in 2023, though this can vary based on income. Additional costs depend on the plans you choose for Part C or D coverage."
+              title: "Do you provide ongoing support after MVP launch?",
+              content: "Yes, we offer various support packages including maintenance, feature enhancements, scaling support, and analytics monitoring to help you iterate based on user feedback and market response."
             },
             {
               id: "4",
-              title: "Do I need to enroll in Medicare if I have employer insurance?",
-              content: "If you have creditable employer coverage, you may be able to delay Medicare enrollment without penalty. However, it's important to understand the rules and deadlines to avoid late enrollment penalties when you do sign up."
+              title: "Can you help with market validation and user research?",
+              content: "Absolutely. We conduct comprehensive market research, competitor analysis, user interviews, and prototype testing to validate your assumptions before development begins."
             },
             {
               id: "5",
-              title: "Can I change my Medicare plan after enrollment?",
-              content: "Yes, you can change your Medicare Advantage or Part D prescription drug plan during the Annual Open Enrollment Period (October 15 - December 7). Some people may also qualify for Special Enrollment Periods due to life events."
+              title: "What technologies do you use for MVP development?",
+              content: "We select the most appropriate technology stack based on your specific needs, including modern web frameworks, mobile development platforms, and cloud infrastructure for optimal scalability and performance."
             }
           ]}
         />
       </div>
-
-      <div id="contact" data-section="contact">
-        <ContactSplit
-          title="Ready to Get Started?"
-          description="Schedule your free Medicare consultation today. Our licensed agents will help you understand your options and find the best coverage for your needs."
-          tag="Free Consultation"
-          tagIcon={Calendar}
-          imageSrc="https://images.pexels.com/photos/8376148/pexels-photo-8376148.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-          mediaPosition="right"
-          inputPlaceholder="Enter your email address"
-          buttonText="Schedule Consultation"
-          termsText="By submitting, you agree to receive Medicare information and updates. We respect your privacy and never share your information."
+      
+      <div id="contact" data-section="contact" className="mx-auto px-4 md:px-6">
+        <ContactCenterForm
+          title="Ready to Launch Your MVP?"
+          description="Let's discuss your project and create a roadmap for your successful product launch. Get in touch with our MVP development experts today."
+          inputs={[
+            { name: "name", type: "text", placeholder: "Your Full Name", required: true },
+            { name: "email", type: "email", placeholder: "Your Email Address", required: true }
+          ]}
+          textarea={{
+            name: "message",
+            placeholder: "Tell us about your MVP idea and requirements...",
+            rows: 5,
+            required: true
+          }}
+          buttonText="Start My MVP Project"
         />
       </div>
-
-      <div id="footer" data-section="footer">
-        <FooterBase
+      
+      <div id="footer" data-section="footer" className="mx-auto px-4 md:px-6">
+        <FooterLogoEmphasis
           columns={[
             {
-              title: "Services",
               items: [
-                {
-                  label: "Medicare Enrollment",
-                  href: "features"
-                },
-                {
-                  label: "Plan Comparison",
-                  href: "features"
-                },
-                {
-                  label: "Benefits Review",
-                  href: "features"
-                },
-                {
-                  label: "Claims Assistance",
-                  href: "features"
-                }
+                { label: "Our Services", href: "features" },
+                { label: "About Us", href: "about" },
+                { label: "Success Stories", href: "testimonials" }
               ]
             },
             {
-              title: "Resources",
               items: [
-                {
-                  label: "Medicare Guide",
-                  href: "faq"
-                },
-                {
-                  label: "FAQ",
-                  href: "faq"
-                },
-                {
-                  label: "Contact Us",
-                  href: "contact"
-                }
-              ]
-            },
-            {
-              title: "Company",
-              items: [
-                {
-                  label: "About Us",
-                  href: "about"
-                },
-                {
-                  label: "Our Team",
-                  href: "about"
-                },
-                {
-                  label: "Testimonials",
-                  href: "testimonials"
-                }
+                { label: "FAQ", href: "faq" },
+                { label: "Get Started", href: "contact" }
               ]
             }
           ]}
-          copyrightText="© 2025 MediCare Plus Agency. Licensed Medicare Insurance Agency."
+          logoText="MVP Solutions"
         />
       </div>
     </ThemeProvider>
